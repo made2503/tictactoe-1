@@ -1,6 +1,6 @@
 body {
   font-family: Helvetica, Arial, sans-serif;
-  background: url("/images/blackboard.jpg") repeat;
+  background: url("/images/board.png") repeat;
   background-size: cover; }
 
 .gameboard {
@@ -51,17 +51,31 @@ body {
   background-color: #0000FF; }
 
 .cross {
-  background: url("/images/cross.gif") no-repeat;
+  background: url("/images/x2.png") no-repeat;
   background-size: cover; }
 
 .circle {
-  background: url("/images/circle.gif") no-repeat;
+  background: url("/images/circulo3.png") no-repeat;
   background-size: cover; }
 
 .base-font, .message {
-  color: #f9a7b0;
+  color: white;
   font: 22px Helvetica, Arial, sans-serif; }
 
 .message {
   display: inline;
   background-color: transparent; }
+
+.enlaces {
+  text-align: left;
+  margin-left: 60px; }
+
+a {
+  color: white; }
+
+a:hover {
+  color: #444444; }
+
+.header {
+  text-align: right;
+  margin-right: 60px; }

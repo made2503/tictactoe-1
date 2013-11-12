@@ -1,17 +1,22 @@
-.barra-superior
+%br
+%br
+%br
+%br
+%br
+.header
   -if (!usuario)
     %form{:action=>"/",:method=>"post"}
-      Introduce tu nombre si quieres ver tu Ranking
+      Introduce tu usuario:
       %input{:type=>"text",:name=>"usuario[username]",:placeholder=>"usuario"}
       %input{:type=>"hidden",:name=>"usuario[partidas_ganadas]",:value=>"0"}
       %input{:type=>"hidden",:name=>"usuario[partidas_perdidas]",:value=>"0"}
-      %input{:type=>"submit",:value=>"enviar"}
+      %input{:type=>"submit",:value=>"ENVIAR"}
   -else
     %form{:action=>"/",:method=>"post"}
       Hola, #{usuario}
-      %input{:type=>"hidden",:value=>"1",:name=>"logout"}
-      %input{:type=>"submit",:value=>"logout"}
-.marcador
+      %input{:type=>"hidden",:value=>"1",:name=>"LOGOUT"}
+      %input{:type=>"submit",:value=>"LOGOUT"}
+.enlaces
   %a{:href=>"/usuarios"}
     RANKING
 .screen 

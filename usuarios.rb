@@ -4,7 +4,7 @@ require 'dm-migrations'
 class Usuario
   include DataMapper::Resource
   property :id, Serial
-  property :name, String
+  property :username, String
   property :partidas_ganadas, Integer
   property :partidas_perdidas, Integer
 end

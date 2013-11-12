@@ -17,7 +17,6 @@ use Rack::Session::Pool, :expire_after => 2592000
 #  set :sessions, :domain => 'herokuapp.com'
 #end
 
-
 configure :development do
   DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/development.db")
 end
@@ -26,19 +25,6 @@ configure :production do
   DataMapper.setup(:default, ENV['DATABASE_URL'])
 end
 
-#DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/development.db")
-DataMapper.auto_upgrade!
-
-
-configure :development do
-  DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/development.db")
-end
-
-configure :production do
-  DataMapper.setup(:default, ENV['DATABASE_URL'])
-end
-
-#DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/development.db")
 DataMapper.auto_upgrade!
 
 module TicTacToe
@@ -191,7 +177,7 @@ get '/humanwins' do
   begin
     m = if human_wins? then
           if (session["usuario"] != nil)
-            un_usuario = Usuario.first(:name => session["usuario"])
+            un_usuario = Usuario.first(:username => session["usuario"])
             un_usuario.partidas_ganadas = un_usuario.partidas_ganadas + 1
             un_usuario.save
             pp un_usuario
@@ -212,7 +198,6 @@ get '/computerwins' do
   pp session
   begin
     m = if computer_wins? then
-          #agregar un loose a la base de datos
           if (session["usuario"] != nil)
             un_usuario = Usuario.first(:username => session["usuario"])
             un_usuario.partidas_perdidas = un_usuario.partidas_perdidas + 1
@@ -240,9 +225,9 @@ post '/' do
     if u == nil
       usuario = Usuario.create(params[:usuario])
       usuario.save
-      Ejem = params[:usuario]
+      Aux = params[:usuario]
       pp params[:usuario]
-      @usuario = Ejem["username"]
+      @usuario = Aux["username"]
       p "ATENCION"
       pp @usuario
       session["usuario"] = @usuario
