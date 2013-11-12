@@ -56,7 +56,7 @@ body       {
     #a#{$i}:hover {background-color:#64fe2e;}
   }
   @else {
-    #a#{$i}:hover {background-color:#df013a;}
+    #a#{$i}:hover {background-color:#0000FF;}
   }
 }
 
@@ -65,14 +65,15 @@ body       {
     #b#{$i}:hover {background-color:#64fe2e;}
   }
   @else {
-    #b#{$i}:hover {background-color:#df013a;}
+    #b#{$i}:hover {background-color:#0000FF;}
   }
 }
 @for $i from 1 through 3 {
   @if ( (($i+$c) % (2)) == 0 ){ 
+     #c#{$i}:hover {background-color:#64fe2e;}
   }
   @else {
-    #c#{$i}:hover {background-color:#df013a;}
+    #c#{$i}:hover {background-color:#0000FF;}
   }
 }
 

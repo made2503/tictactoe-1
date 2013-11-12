@@ -21,7 +21,8 @@ TicTacToe
 
 ##IMPORTANTE##
 
-
+    sudo apt-get install libecpg-dev
+    
 ## EJECUCIÓN ##
 
 TicTacToe.rb
