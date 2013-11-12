@@ -163,7 +163,7 @@ helpers TicTacToe
 
 get %r{^/([abc][123])?$} do |human|
   if human then
-    puts "You played: #{human}!"
+    puts "Juegas: #{human}!"
     puts "session: "
     pp session
     if legal_moves.include? human
@@ -173,7 +173,7 @@ get %r{^/([abc][123])?$} do |human|
       redirect to ('/humanwins') if human_wins?
       redirect to('/') unless computer
       board[computer] = TicTacToe::CROSS
-      puts "I played: #{computer}!"
+      puts "Juego: #{computer}!"
       puts "Tablero:  #{board.inspect}"
       redirect to ('/computerwins') if computer_wins?
     end
@@ -192,9 +192,7 @@ get '/humanwins' do
     m = if human_wins? then
           if (session["usuario"] != nil)
             un_usuario = Usuario.first(:name => session["usuario"])
-            contador = un_usuario.partidas_ganadas
-            contador = contador + 1
-            un_usuario.partidas_ganadas = contador
+            un_usuario.partidas_ganadas = un_usuario.partidas_ganadas + 1
             un_usuario.save
             pp un_usuario
             p "---------"
@@ -217,9 +215,7 @@ get '/computerwins' do
           #agregar un loose a la base de datos
           if (session["usuario"] != nil)
             un_usuario = Usuario.first(:username => session["usuario"])
-            contador = un_usuario.partidas_perdidas
-            contador = contador + 1
-            un_usuario.partidas_perdidas = contador
+            un_usuario.partidas_perdidas = un_usuario.partidas_perdidas + 1
             un_usuario.save
           end
           'Gana Ordenador'
