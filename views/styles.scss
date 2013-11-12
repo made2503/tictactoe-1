@@ -48,8 +48,30 @@ body       {
              float: left; 
            }
 
- @for $i from 1 through 3 {
-    #a#{$i}:hover { background-color:#64FE2E; }
+@for $i from 1 through 3 {
+  @if ( (($i+$a) % (2)) == 0 ){ 
+    #a#{$i}:hover {background-color:#64fe2e;}
+  }
+  @else {
+    #a#{$i}:hover {background-color:#df013a;}
+  }
+}
+
+@for $i from 1 through 3 {
+  @if ( (($i+$b) % (2)) == 0 ){ 
+    #b#{$i}:hover {background-color:#64fe2e;}
+  }
+  @else {
+    #b#{$i}:hover {background-color:#df013a;}
+  }
+}
+@for $i from 1 through 3 {
+  @if ( (($i+$c) % (2)) == 0 ){ 
+    #c#{$i}:hover {background-color:#64fe2e;}
+  }
+  @else {
+    #c#{$i}:hover {background-color:#df013a;}
+  }
 }
 
 @mixin game-piece($image) {
