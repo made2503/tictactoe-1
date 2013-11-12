@@ -4,6 +4,9 @@ $white: #fff;
 $ull:   #9900FF;
 $pink:  #F9A7B0;
 $i: 1;
+$a: 0;
+$b: 3;
+$c: 6;
 
 $main-font: Helvetica, Arial, sans-serif;
 $message-font: 22px/1;
@@ -67,7 +70,6 @@ body       {
 }
 @for $i from 1 through 3 {
   @if ( (($i+$c) % (2)) == 0 ){ 
-    #c#{$i}:hover {background-color:#64fe2e;}
   }
   @else {
     #c#{$i}:hover {background-color:#df013a;}
