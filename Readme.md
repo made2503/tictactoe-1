@@ -1,14 +1,42 @@
-Building a Simple Sinatra Tic-Tac-Toe game 
-==================================================
+![](http://banot.etsii.ull.es/alu4103/STW/tictactoe.jpg)
 
-App currently contains:
+TicTacToe
+================================
 
-* app.rb - the application code
-* Gemfile - specifies the gems this app relies on
-* Gemfile.lock - automatically generated dependancy file
-* views/ - this is the default folder for erb views
-* layout.erb - this is the default layout to be used for all erb files
-* public/ - this is the default folder for serving static assets
-* Procfile - this tells Heroku or Foreman how to run the application
-* Rakefile- installs the gems and run the server
+**Paso 1.** Cogemos la práctica `tictactoe` 
 
+**Paso 2.**
+
+**Paso 3.** 
+
+**Paso 4.** 
+
+**Paso 5.** 
+
+**Paso 6.** 
+
+**Paso 7.** 
+
+**Paso 8.** 
+
+##IMPORTANTE##
+
+
+## EJECUCIÓN ##
+
+TicTacToe.rb
+
+    rake
+
+## VISTA ##
+
+    htpp://localhost:8080
+
+
+## DESARROLLADOR ##
+
+Madelaine Martin
+
+alu0100537130@ull.edu.es
+
+ETSII. Universidad de La Laguna
