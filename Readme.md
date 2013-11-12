@@ -22,6 +22,8 @@ TicTacToe
 ##IMPORTANTE##
 
     sudo apt-get install libecpg-dev
+    sudo apt-get install postgresql-client
+    sudo apt-get install postgresql
     
 ## EJECUCIÓN ##
 

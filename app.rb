@@ -2,7 +2,7 @@ require 'sinatra'
 require 'sass'
 require 'pp'
 require 'haml'
-require './user.rb'
+require './usuarios.rb'
 
 settings.port = ENV['PORT'] || 4567
 #enable :sessions
@@ -191,7 +191,7 @@ get '/humanwins' do
   begin
     m = if human_wins? then
           if (session["usuario"] != nil)
-            un_usuario = Usuario.first(:username => session["usuario"])
+            un_usuario = Usuario.first(:name => session["usuario"])
             contador = un_usuario.partidas_ganadas
             contador = contador + 1
             un_usuario.partidas_ganadas = contador
