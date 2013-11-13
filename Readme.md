@@ -5,22 +5,21 @@ TicTacToe
 
 **Paso 1.** Cogemos la práctica `tictactoe` 
 
-**Paso 2.**
+**Paso 2.** Crearemos la BBDD con DataMapper, para ello creamos el fichero `usuarios.rb` donde tendremos el modelo de la BBDD.
 
-**Paso 3.** 
+**Paso 3.** En `app.rb` crearemos la BBDD y la guardaremos en `development.db`
 
-**Paso 4.** 
+**Paso 4.** Una vez hecho esto, en el mismo fichero `app.rb` se guardarán las partidas jugadas, ganadas y perdidas del usuario creado.
 
-**Paso 5.** 
+**Paso 5.** Crearemos las vistas del Ranking en `views/usuarios.haml`
 
-**Paso 6.** 
+**Paso 6.** Para modificar la apariencia simplemente tenemos que ir a `styles.scss`
 
-**Paso 7.** 
-
-**Paso 8.** 
 
 ##IMPORTANTE##
 
+Si da fallo el sql posiblemente tengas que instalar:
+    
     sudo apt-get install libecpg-dev
     sudo apt-get install postgresql-client
     sudo apt-get install postgresql
@@ -29,12 +28,13 @@ TicTacToe
 
 TicTacToe.rb
 
+    rake css
     rake
 
 ## VISTA ##
 
-    htpp://localhost:8080
-
+    htpp://localhost:4567
+    http://tictactoe-stw1314.herokuapp.com/
 
 ## DESARROLLADOR ##
 

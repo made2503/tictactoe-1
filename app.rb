@@ -4,7 +4,7 @@ require 'pp'
 require 'haml'
 require './usuarios.rb'
 
-#settings.port = ENV['PORT'] || 4567
+settings.port = ENV['PORT'] || 4567
 #enable :sessions
 use Rack::Session::Pool, :expire_after => 2592000
 #set :session_secret, 'super secret'
