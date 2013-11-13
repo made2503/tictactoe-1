@@ -13,6 +13,9 @@
                                 %th
                                 %th
                                 %th Perdidas
+                                %th
+                                %th
+                                %th Jugadas
                         - @usuarios.sort_by {|k, v| v}.reverse.each do |usuario| 
                                 %tr
                                         %td
@@ -25,6 +28,10 @@
                                         %td
                                         %td        
                                                 #{usuario.partidas_perdidas}
+                                        %td
+                                        %td
+                                        %td        
+                                                #{usuario.partidas_jugadas}
         .enlaces
                 %a{:href=>"/"}
                         JUEGO
