@@ -60,7 +60,7 @@ body {
 
 .base-font, .message {
   color: white;
-  font: 22px Helvetica, Arial, sans-serif; }
+  font: 20px Helvetica, Arial, sans-serif; }
 
 .message {
   display: inline;
@@ -74,7 +74,7 @@ a {
   color: white; }
 
 a:hover {
-  color: #444444; }
+  color: black; }
 
 .header {
   text-align: right;

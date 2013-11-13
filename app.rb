@@ -4,7 +4,7 @@ require 'pp'
 require 'haml'
 require './usuarios.rb'
 
-settings.port = ENV['PORT'] || 4567
+#settings.port = ENV['PORT'] || 4567
 #enable :sessions
 use Rack::Session::Pool, :expire_after => 2592000
 #set :session_secret, 'super secret'
@@ -183,7 +183,7 @@ get '/humanwins' do
             pp un_usuario
             p "---------"
           end
-          'Gana Humano'
+          'WIN! =)'
         else 
           redirect '/'
         end
@@ -203,7 +203,7 @@ get '/computerwins' do
             un_usuario.partidas_perdidas = un_usuario.partidas_perdidas + 1
             un_usuario.save
           end
-          'Gana Ordenador'
+          'OUCH! COMPUTER WINS'
         else 
           redirect '/'
         end

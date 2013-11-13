@@ -1,23 +1,30 @@
 .message
-        .tabla
-                %br
-                %br
-                %br
-                %center
-                        %h3 RANKING
-                        %table
+        %br
+        %br
+        %br
+        %center
+                %h3 RANKING
+                %table
+                        %tr
+                                %th Nombre
+                                %th
+                                %th
+                                %th Ganadas
+                                %th
+                                %th
+                                %th Perdidas
+                        - @usuarios.sort_by {|k, v| v}.reverse.each do |usuario| 
                                 %tr
-                                        %th Nombre
-                                        %th Ganadas
-                                        %th Perdidas
-                                - @usuarios.sort_by {|k, v| v}.reverse.each do |usuario| 
-                                        %tr
-                                                %td
-                                                        #{usuario.username}
-                                                %td
-                                                        #{usuario.partidas_ganadas}
-                                                %td        
-                                                        #{usuario.partidas_perdidas}
-                .enlaces
-                        %a{:href=>"/"}
-                                Volver al juego
+                                        %td
+                                                #{usuario.username}
+                                        %td
+                                        %td
+                                        %td
+                                                #{usuario.partidas_ganadas}
+                                        %td
+                                        %td
+                                        %td        
+                                                #{usuario.partidas_perdidas}
+        .enlaces
+                %a{:href=>"/"}
+                        JUEGO
