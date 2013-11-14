@@ -38,7 +38,8 @@ body       {
            }
 .gamerow   { clear: both; }
 
-.cell      { color: blue; 
+.cell      { 
+             color: blue; 
              background-color: $red; 
              opacity: $opacity;
              width: $cell-width; 
