@@ -207,7 +207,7 @@ get '/computerwins' do
             un_usuario.partidas_jugadas = un_usuario.partidas_jugadas + 1
             un_usuario.save
           end
-          'OUCH!ZURG WINS'
+          'OUCH! ZURG WINS'
         else 
           redirect '/'
         end

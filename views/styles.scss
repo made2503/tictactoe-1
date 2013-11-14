@@ -1,4 +1,4 @@
-$red:   #903;
+$red:   #FF0000;
 $black: #444;
 $white: #fff;
 $ull:   #9900FF;
@@ -39,7 +39,7 @@ body       {
 .gamerow   { clear: both; }
 
 .cell      { color: blue; 
-             background-color: white; 
+             background-color: $red; 
              opacity: $opacity;
              width: $cell-width; 
              height: $cell-height; 
