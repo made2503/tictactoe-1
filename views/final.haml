@@ -6,8 +6,8 @@
 .header
   -if (!usuario)
     %form{:action=>"/",:method=>"post"}
-      Introduce tu usuario:
-      %input{:type=>"text",:name=>"usuario[username]",:placeholder=>"usuario"}
+      USUARIO:
+      %input{:type=>"text",:name=>"usuario[username]",:placeholder=>"USUARIO"}
       %input{:type=>"hidden",:name=>"usuario[partidas_ganadas]",:value=>"0"}
       %input{:type=>"hidden",:name=>"usuario[partidas_perdidas]",:value=>"0"}
       %input{:type=>"hidden",:name=>"usuario[partidas_jugadas]",:value=>"0"}
@@ -17,7 +17,7 @@
       Hola, #{usuario}
       %input{:type=>"hidden",:value=>"1",:name=>"LOGOUT"}
       %input{:type=>"submit",:value=>"LOGOUT"}
-.enlaces
+.button
   %a{:href=>"/usuarios"}
     RANKING
 .gameboard
