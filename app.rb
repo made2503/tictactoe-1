@@ -186,7 +186,7 @@ get '/humanwins' do
             pp un_usuario
             p "---------"
           end
-          'WIN! =)'
+          'BUZZ WIN! =)'
         else 
           redirect '/'
         end
@@ -207,7 +207,7 @@ get '/computerwins' do
             un_usuario.partidas_jugadas = un_usuario.partidas_jugadas + 1
             un_usuario.save
           end
-          'OUCH! COMPUTER WINS'
+          'OUCH!ZURG WINS'
         else 
           redirect '/'
         end
