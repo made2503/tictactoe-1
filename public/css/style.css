@@ -64,7 +64,8 @@ body {
 
 .message {
   display: inline;
-  background-color: transparent; }
+  background-color: transparent;
+  margin-top: 100px; }
 
 a {
   color: white; }
