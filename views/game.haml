@@ -1,4 +1,6 @@
-%br
+.button
+  %a{:href=>"/usuarios"}
+    RANKING
 %br
 %br
 %br
@@ -17,9 +19,7 @@
       Hola, #{usuario}
       %input{:type=>"hidden",:value=>"1",:name=>"LOGOUT"}
       %input{:type=>"submit",:value=>"LOGOUT"}
-.button
-  %a{:href=>"/usuarios"}
-    RANKING
+
 .screen 
   .gameboard
     - HORIZONTALS.each do |row| 
