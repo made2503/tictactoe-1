@@ -1,8 +1,6 @@
-%br
-%br
-%br
-%br
-%br
+.button
+  %a{:href=>"/usuarios"}
+    RANKING
 .header
   -if (!usuario)
     %form{:action=>"/",:method=>"post"}
@@ -17,9 +15,7 @@
       Hola, #{usuario}
       %input{:type=>"hidden",:value=>"1",:name=>"LOGOUT"}
       %input{:type=>"submit",:value=>"LOGOUT"}
-.button
-  %a{:href=>"/usuarios"}
-    RANKING
+
 .gameboard
   - HORIZONTALS.each do |row| 
     .gamerow
