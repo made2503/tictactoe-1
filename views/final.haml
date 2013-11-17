@@ -16,6 +16,10 @@
       %input{:type=>"hidden",:value=>"1",:name=>"LOGOUT"}
       %input{:type=>"submit",:value=>"LOGOUT"}
 
+.button
+  %a{:href=>"/"}
+    JUEGO
+    
 .gameboard
   - HORIZONTALS.each do |row| 
     .gamerow
